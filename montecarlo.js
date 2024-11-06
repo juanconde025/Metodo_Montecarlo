@@ -1,19 +1,19 @@
-function calcularPI(numPuntos) {
-    let puntosDentroDelCirculo = 0;
+function calcular(coordenadas) {
+    let dentrodelcirculo = 0;
 
-    for (let i = 0; i < numPuntos; i++) {
+    for (let i = 0; i < coordenadas; i++) {
         let x = Math.random() * 2 - 1;
         let y = Math.random() * 2 - 1; 
 
         if (x * x + y * y <= 1) {
-            puntosDentroDelCirculo++;
+            dentrodelcirculo++;
         }
     }
 
-    let piEstimado = 4 * (puntosDentroDelCirculo / numPuntos);
-    return piEstimado;
+    let pi= 4 * (dentrodelcirculo / coordenadas);
+    return pi;
 }
 
-let numPuntos = 1000000;  
-let pi = calcularPI(numPuntos);
-console.log("Valor estimado de PI:", pi);
+let coordenadas = 1000000;  
+let pi = calcular(coordenadas);
+console.log("valorde PI:", pi);
